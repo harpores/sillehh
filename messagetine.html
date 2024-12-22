@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<!-- saved from url=(0079)file:///C:/Users/Demi/Documents/Sprunki%20Archive%20Collection%20Mixtracks.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Me | The sequel </title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+            touch-action: manipulation;
+        }
+
+h1 {
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white; /* Glowing effect */
+}
+
+		
+        .bar {
+           width: 10px; /* Example width */
+           background-color: cyan;
+           margin: 1px;
+           transition: height 0.1s ease; /* Smooth height change */
+           box-shadow: 0 0 10px cyan, 0 0 20px cyan, 0 0 30px cyan; /* Glow effect */
+        }
+         
+        
+.button {
+    margin: 10px;
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1rem;
+    color: white;
+    background-color: black;
+    border: 2px solid white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px 2px white; /* White glow effect */
+}
+
+        
+        .button2 {
+            margin: 10px;
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1rem;
+            color: cyan;
+            background-color: black;
+            border: 2px solid cyan;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+			box-shadow: 0 0 10px 2px cyan; /* Cyan glow effect */
+        }
+         
+        .button:hover {
+            background-color: white;
+            color: black;
+        }
+		
+		        .button2:hover {
+            background-color: cyan;
+            color: black;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Custom scrollbar styles */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #2e2e2e;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: cyan;
+            border-radius: 6px;
+            transition: background 0.3s;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #00b8b8;
+        }
+    .submit-section {
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+.visualizer {
+    position: absolute; /* Position it outside the flow of the page */
+    top: 50%; /* You can adjust the position as needed */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; /* Make it as wide as you need */
+    height: 100px; /* Adjust the height based on your desired visualizer size */
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    z-index: 10; /* Make sure it appears above other elements */
+}
+
+.scroll-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    overflow-y: auto;
+    max-height: 70vh; /* Adjust as needed */
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 10px;
+    position: relative; /* Ensure scroll-container stays within its boundaries */
+	box-shadow: 0 0 10px 2px white; /* White glow effect */
+}
+
+    .submit-input {
+        width: 80%;
+        max-width: 600px;
+        padding: 10px;
+        font-size: 1rem;
+        background-color: black;
+        color: white;
+        border: 2px solid white;
+        border-radius: 5px;
+        resize: none;
+        outline: none;
+        transition: all 0.3s ease;
+		box-shadow: 0 0 10px 2px white; /* White glow effect */
+    }
+
+    .submit-input:focus {
+        border-color: cyan;
+    }
+
+    .submit-input::placeholder {
+        color: gray;
+        font-size: 0.9rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* Auto-resize functionality */
+    .submit-input.auto-resize {
+        min-height: 40px; /* Starting height */
+        line-height: 1.5; /* Adjust for better readability */
+        overflow-y: hidden;
+    }
+
+    .submit-input.auto-resize:focus {
+        min-height: 60px; /* Increase starting height on focus */
+    }
+	/* Style for the particles */
+.particles {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Ensures particles don't interact with buttons */
+    z-index: -1; /* Puts particles behind other content */
+}
+
+.particle {
+    position: absolute;
+    bottom: 0;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 1;
+    animation: floatUp 5s linear infinite, fadeOut 5s linear infinite;
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.7); /* White glow effect */
+}
+
+/* Optional: You can add different glows on hover, or randomize glows using JavaScript */
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100vh); /* Adjust this value for how far you want particles to move */
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div id="mods-page">
+        <h1>Message Me</h1>
+		<div class="particles"></div>
+        <div class="scroll-container">
+
+        </div>
+    </div>
+
+    <div class="particles"></div>
+    <div class="fade"></div>
+
+<div class="submit-section">
+    <textarea id="modInput" class="submit-input auto-resize" placeholder="Send anything..."></textarea>
+    <button id="submitButton" class="button">Submit</button>
+</div>
+
+    <script>
+	 const particleContainer = document.querySelector('.particles');
+        // Particle creation and animation
+function createParticle() {
+    const particle = document.createElement('div');
+    particle.classList.add('particle');
+    const xPos = Math.random() * window.innerWidth; // Random X position
+    const delay = Math.random() * 2; // Random delay for staggered start
+
+    particle.style.left = `${xPos}px`;
+    particle.style.animationDelay = `${delay}s`;
+
+    document.querySelector('.particles').appendChild(particle);
+
+    // Remove the particle after the animation completes
+    setTimeout(() => {
+        particle.remove();
+    }, 5000); // Matches animation duration
+}
+
+// Generate particles at intervals
+setInterval(createParticle, 100); // Adjust the interval for particle density
+
+               const modsPage = document.getElementById('mods-page');
+        const backButton = document.getElementById('backButton');
+        const playButton = document.getElementById('playMix');
+        const stopButton = document.getElementById('stopMix');
+        const visualizer = document.getElementById('visualizer');
+    const modInput = document.getElementById('modInput');
+
+    // Dynamically adjust the height of the text box based on content
+    modInput.addEventListener('input', (event) => {
+        event.target.style.height = 'auto'; // Reset height
+        event.target.style.height = `${event.target.scrollHeight}px`; // Adjust to content
+    });
+
+    // Ensure the input field has the auto-resize class
+    modInput.classList.add('auto-resize');
+
+
+        const audio = new Audio('SprunkrMix.mp3');
+        audio.loop = true;
+
+        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        const analyser = audioContext.createAnalyser();
+        const source = audioContext.createMediaElementSource(audio);
+
+        source.connect(analyser);
+        analyser.connect(audioContext.destination);
+
+        analyser.fftSize = 256;
+        const bufferLength = analyser.frequencyBinCount;
+        const dataArray = new Uint8Array(bufferLength);
+
+        for (let i = 0; i < bufferLength; i++) {
+            const bar = document.createElement('div');
+            bar.className = 'bar';
+        }
+
+        const bars = document.querySelectorAll('.bar');
+
+
+// Submit Mod Button Logic
+        const webhookUrl = "https://discord.com/api/webhooks/1320461037354618880/gzauO7bStXBKrqsa1zKiqjdYhvGaIscJnSma1p3RB-plv2qMSzBTKdwSQ7qstsJOh4wP";
+        const submitButton = document.getElementById('submitButton');
+
+        let isCooldown = false;
+
+        submitButton.addEventListener('click', async () => {
+            if (isCooldown) {
+                alert('Please wait before submitting again.');
+                return;
+            }
+
+            const modContent = modInput.value.trim();
+            if (!modContent) {
+                alert('Please enter text before submitting.');
+                return;
+            }
+
+            isCooldown = true;
+            submitButton.textContent = 'Submitting...';
+
+            try {
+                await fetch(webhookUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        content: `@here\n${modContent}`
+                    })
+                });
+
+                alert('Mod submitted successfully!');
+                modInput.value = '';
+            } catch (error) {
+                alert('Failed to submit. Please try again later.');
+                console.error(error);
+            }
+
+            submitButton.textContent = 'Submit';
+
+            setTimeout(() => {
+                isCooldown = false;
+            }, 100000); // 100 seconds cooldown
+        });
+    </script>
+
+
+</body></html>
